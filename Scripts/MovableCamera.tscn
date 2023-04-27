@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/MovableCamera.gd" type="Script" id=1]
+[ext_resource path="res://HUD/btn_normal.png" type="Texture" id=2]
+[ext_resource path="res://HUD/btn_presse.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/FFFFORWA.TTF" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[node name="MovableCamera" type="Camera2D"]
+position = Vector2( 640, 360 )
+current = true
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ZoomIn" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 30, 553 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="CanvasLayer/ZoomIn"]
+margin_left = 11.0
+margin_top = 3.5
+margin_right = 51.0
+margin_bottom = 25.5
+custom_fonts/font = SubResource( 1 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="ZoomOut" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 30, 617 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="CanvasLayer/ZoomOut"]
+margin_left = 11.0
+margin_top = 3.5
+margin_right = 51.0
+margin_bottom = 25.5
+custom_fonts/font = SubResource( 1 )
+text = "-"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="CanvasLayer/ZoomIn" to="." method="_on_ZoomIn_pressed"]
+[connection signal="pressed" from="CanvasLayer/ZoomOut" to="." method="_on_ZoomOut_pressed"]

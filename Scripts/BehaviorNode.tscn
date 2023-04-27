@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://HUD/node_card.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/FFFFORWA.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://HUD/btn_normal.png" type="Texture" id=3]
+[ext_resource path="res://HUD/btn_presse.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/BehaviorNode.cs" type="Script" id=5]
+[ext_resource path="res://HUD/close_button_normal.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="BehaviorNode" type="Control" groups=["behaviorNode"]]
+margin_right = -1024.0
+margin_bottom = -464.0
+script = ExtResource( 5 )
+
+[node name="BG" type="Sprite" parent="."]
+scale = Vector2( 8, 8 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Dialogs" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Label" type="Label" parent="."]
+margin_right = 249.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 1 )
+text = "NODE"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Description" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 59.0
+margin_right = 250.0
+margin_bottom = 212.0
+custom_fonts/font = SubResource( 2 )
+text = "Name of the Behavior"
+autowrap = true
+clip_text = true
+
+[node name="AddChildNode" type="TextureButton" parent="."]
+margin_left = 67.0
+margin_top = 233.0
+margin_right = 195.0
+margin_bottom = 265.0
+rect_min_size = Vector2( 128, 32 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="AddChildNode"]
+anchor_right = 0.969
+anchor_bottom = 0.7
+margin_right = -0.0160027
+margin_bottom = 7.0
+custom_fonts/font = SubResource( 3 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="EditNodeButton" type="TouchScreenButton" parent="."]
+self_modulate = Color( 0, 0, 0, 0 )
+position = Vector2( 8, 7 )
+scale = Vector2( 3.70313, 6.34375 )
+normal = ExtResource( 3 )
+
+[node name="Exit" type="TouchScreenButton" parent="."]
+position = Vector2( 255, 1 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 6 )
+
+[connection signal="button_up" from="AddChildNode" to="." method="AddChildNode"]
+[connection signal="released" from="EditNodeButton" to="." method="NodePressed"]
+[connection signal="released" from="Exit" to="." method="Remove"]

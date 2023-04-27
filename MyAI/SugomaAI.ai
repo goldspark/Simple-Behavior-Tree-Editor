@@ -1,0 +1,4 @@
+[Children]
+Selector2
+Sequence1[Parent=Selector2]
+Selector2[Parent=Selector2]

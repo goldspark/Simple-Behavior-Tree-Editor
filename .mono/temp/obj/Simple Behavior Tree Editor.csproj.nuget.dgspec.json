@@ -1,0 +1,54 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\TOOLPROJECTS\\SIMPLE BEHAVIOR TREE EDITOR\\Simple Behavior Tree Editor.csproj": {}
+  },
+  "projects": {
+    "F:\\TOOLPROJECTS\\SIMPLE BEHAVIOR TREE EDITOR\\Simple Behavior Tree Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\TOOLPROJECTS\\SIMPLE BEHAVIOR TREE EDITOR\\Simple Behavior Tree Editor.csproj",
+        "projectName": "Simple Behavior Tree Editor",
+        "projectPath": "F:\\TOOLPROJECTS\\SIMPLE BEHAVIOR TREE EDITOR\\Simple Behavior Tree Editor.csproj",
+        "packagesPath": "C:\\Users\\infer\\.nuget\\packages\\",
+        "outputPath": "F:\\TOOLPROJECTS\\SIMPLE BEHAVIOR TREE EDITOR\\.mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Users\\infer\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\infer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\infer\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "c:\\program files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

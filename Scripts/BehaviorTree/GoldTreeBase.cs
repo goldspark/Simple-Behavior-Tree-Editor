@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 
 namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
@@ -29,6 +26,11 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 
         public GoldNode root;
 
+        public GoldTreeBase()
+        {
+            Initialize(RootType.SELECTOR);
+        }
+
         public GoldTreeBase(RootType rootType)
         {
             Initialize(rootType);
@@ -38,15 +40,14 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 
         private void Initialize(RootType rootType)
         {
-            if(rootType == RootType.SELECTOR)
-            {
-                root = new GoldSelector();
-            }
+
             Start();
 
-            root.tree = this;
-
-            World.npcs.Add(this);
+            if (root != null)
+            {
+                root.tree = this;
+                AIWorld.npcs.Add(this);
+            }
         }
 
         public abstract void Start();

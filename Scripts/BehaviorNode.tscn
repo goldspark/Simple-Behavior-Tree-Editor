@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://HUD/node_card.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/FFFFORWA.TTF" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://HUD/btn_presse.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/BehaviorNode.cs" type="Script" id=5]
 [ext_resource path="res://HUD/close_button_normal.png" type="Texture" id=6]
+[ext_resource path="res://HUD/show.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -34,6 +35,7 @@ z_index = 1
 [node name="Label" type="Label" parent="."]
 margin_right = 249.0
 margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "NODE"
 align = 1
@@ -72,8 +74,8 @@ valign = 1
 
 [node name="EditNodeButton" type="TouchScreenButton" parent="."]
 self_modulate = Color( 0, 0, 0, 0 )
-position = Vector2( 8, 7 )
-scale = Vector2( 3.70313, 6.34375 )
+position = Vector2( 2, 3 )
+scale = Vector2( 3.9375, 7 )
 normal = ExtResource( 3 )
 
 [node name="Exit" type="TouchScreenButton" parent="."]
@@ -81,6 +83,12 @@ position = Vector2( 255, 1 )
 scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 6 )
 
+[node name="ShowHide" type="TouchScreenButton" parent="."]
+position = Vector2( -64, 0 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 7 )
+
 [connection signal="button_up" from="AddChildNode" to="." method="AddChildNode"]
-[connection signal="released" from="EditNodeButton" to="." method="NodePressed"]
+[connection signal="pressed" from="EditNodeButton" to="." method="NodeSelected"]
 [connection signal="released" from="Exit" to="." method="Remove"]
+[connection signal="pressed" from="ShowHide" to="." method="HideChildren"]

@@ -1,8 +1,9 @@
 using Godot;
 using SimpleBehaviorTreeEditor.BehaviorTree;
+using SimpleBehaviorTreeEditor.Scripts;
 using System;
 using System.Collections.Generic;
-public class BehaviorNode : Control
+public class BehaviorNode : Control, IEquatable<BehaviorNode>
 {
     // Declare member variables here. Examples:
     // private int a = 2;
@@ -10,6 +11,9 @@ public class BehaviorNode : Control
     public int id = 0;
 
     public Label title, description;
+    public TouchScreenButton btnShowHide;
+    public Sprite background;
+    public bool isHidden = false;
     static PackedScene packedSceneLocation = ResourceLoader.Load<PackedScene>("res://Scripts/BehaviorNode.tscn");
 
     
@@ -31,7 +35,18 @@ public class BehaviorNode : Control
     public override void _Ready()
     {
         dialogs = GetNode<Node2D>("Dialogs");
+        background = GetNode<Sprite>("BG");
+        btnShowHide = GetNode<TouchScreenButton>("ShowHide");
+
+        if (parent == null)
+        {
+            btnShowHide.QueueFree();
+            AIEditor.rootNode = this;
+        }
     }
+
+
+    
 
     public static BehaviorNode CreateNode(Vector2 pos, string title, string description, BehaviorNode parent)
     {
@@ -76,6 +91,7 @@ public class BehaviorNode : Control
         behaviorNode.GoldNodeName = title;
         children.Add(behaviorNode);
         ReAranageChildren();
+        AIEditor.RearrangeNodes();
     }
 
     public BehaviorNode CreateChildR(Vector2 pos, string title, string description, BehaviorNode parent)
@@ -97,23 +113,24 @@ public class BehaviorNode : Control
         behaviorNode.GoldNodeName = title;
         children.Add(behaviorNode);
         ReAranageChildren();
+        AIEditor.RearrangeNodes();
 
         return behaviorNode;
     }
 
 
     float marginY = 20f;
-    private void ReAranageChildren()
+    public void ReAranageChildren()
     {
         float width = numberOfChildren * size.x;
-        
 
-        if (children.Count > 1)
+        
+        if (children.Count > 0)
         {
             for (int i = 0; i < children.Count; i++)
             {
                 float x = RectPosition.x - (width * 0.5f) + (i * (size.x)) + (size.x * 0.5f); // have to multiply with 0.5f because its scale
-                children[i].RectPosition = new Vector2(x, children[i].RectPosition.y);
+                children[i].RectPosition = new Vector2(x, children[i].RectPosition.y);                
             }
         }
     }
@@ -146,33 +163,72 @@ public class BehaviorNode : Control
 
     public BehaviorNode AddChild(string name)
     {
-            BehaviorNode n;
-            numberOfChildren++;
+        BehaviorNode n;
+        numberOfChildren++;
 
-            Vector2 startPos = new Vector2(this.RectPosition.x + (size.x * 0.5f * numberOfChildren), this.RectPosition.y + size.y + marginY);
+        Vector2 startPos = new Vector2(this.RectPosition.x + (size.x * 0.5f * numberOfChildren), this.RectPosition.y + size.y + marginY);
 
-            n = CreateChildR(startPos, name, "A child node", this);
+        n = CreateChildR(startPos, name, "A child node", this);
 
-            foreach (BehaviorNode node in children)
-            {
-                node.Visible = true;
-            }
+
+        foreach (BehaviorNode node in children)
+        {
+            node.Visible = true;
+        }
 
         return n;
     }
 
 
 
-    public void NodePressed()
+    public void HideChildren()
     {
+
+  
+        isHidden = !isHidden;
+
+        if (isHidden)
+        {
+            btnShowHide.Normal = ResourceLoader.Load<Texture>("res://HUD/hide.png");
+        }
+        else
+        {
+            btnShowHide.Normal = ResourceLoader.Load<Texture>("res://HUD/show.png");
+        }
+
         if (parent != null)
         {
-            foreach(BehaviorNode node in children)
+            foreach(BehaviorNode child in children)
             {
-                node.Visible = !node.Visible;
-                node.NodePressed();
+                
+                child.Visible = !child.Visible;  
+                child.HideChildren();
             }
         }
+    }
+
+    public void NodeSelected()
+    {
+        
+
+        BehaviorNode selectedNode = AIEditor.Instance.selectedNode;
+   
+        if (selectedNode != null)
+        {
+            if(selectedNode.id != id)
+            {
+                selectedNode.background.Texture = ResourceLoader.Load<Texture>("res://HUD/node_card.png");
+                background.Texture = ResourceLoader.Load<Texture>("res://HUD/node_card_selected.png");
+                AIEditor.Instance.selectedNode = this;
+            }
+        }
+        else
+        {
+            background.Texture = ResourceLoader.Load<Texture>("res://HUD/node_card_selected.png");
+            AIEditor.Instance.selectedNode = this;
+        }
+
+        AIEditor.Instance.explanationText.Text = BehaviorExplainer.ExplainText(this);
     }
 
 
@@ -196,18 +252,50 @@ public class BehaviorNode : Control
         DialogWithList.Instance.RectScale = new Vector2(1.5f, 1.5f);
     }
 
-    public void Remove()
+
+
+   public void Remove()
     {
-       
+
+
+        if (parent != null)
+        {
+            parent.children.Remove(this);
+            parent.numberOfChildren--;
+            parent.ReAranageChildren();
+        }
+
+        RemoveRecursive();
+
+        if(parent != null)
+        if (parent.children.Count > 0)
+        {
+            ReAranageChildren();
+        }
+    }
+  
+
+    private void RemoveRecursive()
+    {
         for (int i = 0; i < children.Count; i++)
-        {  
-            children[i].Remove();
+        {
+            numberOfChildren = 0;     
+            children[i].RemoveRecursive();
         }
 
         children.Clear();
         QueueFree();
 
+
+        if (parent != null)
+            parent.CallDeferred("ReAranageChildren");
+
     }
 
-   
+    public bool Equals(BehaviorNode other)
+    {
+        if(other == null) return false;
+
+        return this.id.Equals(other.id);
+    }
 }

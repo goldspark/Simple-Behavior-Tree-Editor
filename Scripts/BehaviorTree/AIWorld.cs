@@ -10,9 +10,9 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
     /// <summary>
     /// Main AI loop. Must be put in a game worldd in order for Behavior Trees of NPCs to work!
-    /// Create new AI class as a derive of this one
+    /// Create your own class and derive from this one
     /// </summary>
-    public abstract class World
+    public abstract class AIWorld
     {
         /// <summary>
         /// Collection of active npcs in the world
@@ -21,7 +21,6 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 
         
         private Stopwatch stopwatch;
-        //You may edit TargetFPS value appropriate for your project
 
         /// <summary>
         /// Set FPS for ai in function UpdateAIMT().
@@ -48,7 +47,7 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
         /// </example>
         /// <paramref name="fps"/>: Set frames per second on which this loop will run at. If 0 it will run at 30 fps
         /// </summary>
-        public virtual void UpdateAIMT(double fps)
+        public virtual void UpdateAIMT(double fps = 0)
         {
 
             double TargetFPS;

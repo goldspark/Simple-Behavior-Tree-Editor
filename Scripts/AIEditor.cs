@@ -23,12 +23,18 @@ public class AIEditor : Control
     PackedScene dialogPackedScene;
 
     public static AIEditor Instance;
-    public BehaviorNode currentNode;
 
+    public BehaviorNode currentNode;
+    public BehaviorNode selectedNode;
+    public static BehaviorNode rootNode;
     public TextureButton addRootBtn;
     public List<Selection> selectionList = new List<Selection>();
     public Node2D editText;
     public Node2D dialogs;
+    public RichTextLabel explanationText;
+
+
+
     public override void _Ready()
     {
         Instance = this;
@@ -38,6 +44,7 @@ public class AIEditor : Control
         addRootBtn = GetNode<TextureButton>("AddRoot");
         dialogs = GetNode<Node2D>("Dialogs");
         editText = GetNode<Node2D>("EditText");
+        explanationText = GetNode<RichTextLabel>("ColorRect/RichTextLabel");
 
         //Create save folder for this system
         if (!System.IO.Directory.Exists(System.IO.Path.GetDirectoryName("MyAI"))){
@@ -127,8 +134,8 @@ public class AIEditor : Control
     //Load AI
     public void SelectionYes()
     {
-        if(currentNode != null)
-            currentNode.Remove();
+        if(rootNode != null)
+            rootNode.Remove();
         LoadAIFile();
         DialogWithList.Instance.QueueFree();
 
@@ -154,8 +161,7 @@ public class AIEditor : Control
         else
             CreateSequence();
 
-
-        
+      
          AttachChildren(text, currentNode, keys[0]);
         
        
@@ -170,11 +176,36 @@ public class AIEditor : Control
             string noNumberName = Regex.Replace(childName, @"\d+", "");
             BehaviorNode n = node.AddChild(noNumberName);
             AttachChildren(text, n, childName);
-       }
             
-        
+       }
+
+        RearrangeNodes();
+
     }
    
+    public static void RearrangeNodes()
+    {
+        rootNode.ReAranageChildren();
+
+        for (int i = 0; i < rootNode.children.Count; i++)
+        {
+            rootNode.children[i].ReAranageChildren();
+            RearrangeChildren(rootNode.children[i]);
+        }
+    }
+
+    private static void RearrangeChildren(BehaviorNode child)
+    {
+        if (child.children != null && child.children.Count < 1)
+            return;
+
+        for(int i = 0; i < child.children.Count; i++)
+        {
+            child.children[i].ReAranageChildren();
+            RearrangeChildren(child.children[i]);
+        }
+    }
+
 
     public void CancelSelection()
     {
@@ -190,9 +221,9 @@ public class AIEditor : Control
     public void ExitPressed()
     {
         GetParent().GetParent<Node2D>().QueueFree();
-        //GetTree().ChangeScene("res://Scenes/MainMenu.tscn");
+        
     }
-    //Control pozicija je doljni desni ugao
+    //Control pozicija je doljnji desni ugao
 
     public void CreateSelector()
     {

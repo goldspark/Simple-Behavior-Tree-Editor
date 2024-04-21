@@ -1,6 +1,5 @@
 using Godot;
 using SimpleBehaviorTreeEditor.BehaviorTree;
-using SimpleBehaviorTreeEditor.Scripts;
 using System;
 using System.Collections.Generic;
 public class BehaviorNode : Control, IEquatable<BehaviorNode>
@@ -228,7 +227,7 @@ public class BehaviorNode : Control, IEquatable<BehaviorNode>
             AIEditor.Instance.selectedNode = this;
         }
 
-        AIEditor.Instance.explanationText.Text = BehaviorExplainer.ExplainText(this);
+        
     }
 
 

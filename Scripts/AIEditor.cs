@@ -2,8 +2,13 @@ using Godot;
 using SimpleBehaviorTreeEditor.AIEditor;
 using SimpleBehaviorTreeEditor.BehaviorTree;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -32,7 +37,7 @@ public class AIEditor : Control
     public Node2D editText;
     public Node2D dialogs;
     public RichTextLabel explanationText;
-
+    public FileDialog fileDialog;
 
 
     public override void _Ready()
@@ -44,7 +49,7 @@ public class AIEditor : Control
         addRootBtn = GetNode<TextureButton>("AddRoot");
         dialogs = GetNode<Node2D>("Dialogs");
         editText = GetNode<Node2D>("EditText");
-        explanationText = GetNode<RichTextLabel>("ColorRect/RichTextLabel");
+        fileDialog = GetParent().GetNode<FileDialog>("FileDialog");
 
         //Create save folder for this system
         if (!System.IO.Directory.Exists(System.IO.Path.GetDirectoryName("MyAI"))){
@@ -52,19 +57,14 @@ public class AIEditor : Control
         }
         ////////////////////////////////////
         ///
-        
-        //Load available nodes file
-        string text = System.IO.File.ReadAllText("AvailableNodes.txt");
-        string[] lines = text.Split('\n');
 
-        availableNodes = new string[lines.Length];
-        
-        for(int i = 0; i < lines.Length; i++)
-        {
-            availableNodes[i] = lines[i].Trim();
-        }
-       
-        
+
+        availableNodes = new string[2];
+
+        availableNodes[0] = "Sequence";
+        availableNodes[1] = "Selector";
+
+
     }
 
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -74,6 +74,8 @@ public class AIEditor : Control
         {
             AIEditor.Instance.addRootBtn.Visible = true;
         }
+
+       
     }
 
     private void LoadSavedAIFiles()
@@ -85,7 +87,7 @@ public class AIEditor : Control
         foreach (string file in files)
         {
             Selection selection = ResourceLoader.Load<PackedScene>("res://Scripts/Selection.tscn").Instance<Selection>();
-            selection.buttonName = selection.GetNode<Label>("Button/Label");
+            selection.buttonName = selection.GetNode<Godot.Label>("Button/Label");
             selection.button = selection.GetNode<TextureButton>("Button");
 
             
@@ -146,7 +148,11 @@ public class AIEditor : Control
     private void LoadAIFile()
     {
         FileCreator.ReadAIFile("MyAI/" + Selection.PressedInstance.buttonName.Text);
-        string text = System.IO.File.ReadAllText("MyAI/"+ Selection.PressedInstance.buttonName.Text);
+        Godot.File saveGame = new Godot.File();
+        saveGame.OpenEncryptedWithPass("MyAI/" + Selection.PressedInstance.buttonName.Text, Godot.File.ModeFlags.Read, "Ligmasin");
+        string text = saveGame.GetAsText();
+        saveGame.Close();
+
 
         foreach (string key in FileCreator.parents.Keys)
         {
@@ -163,8 +169,7 @@ public class AIEditor : Control
 
       
          AttachChildren(text, currentNode, keys[0]);
-        
-       
+ 
         
     }
 
@@ -243,6 +248,38 @@ public class AIEditor : Control
 
     }
 
+    private void FileDialog_DirSelected(string dir)
+    {
+        
+
+
+        // Process the list of files found in the directory. 
+        string[] fileEntries = System.IO.Directory.GetFiles(dir, "*.cs", SearchOption.AllDirectories).Select(System.IO.Path.GetFileNameWithoutExtension).Select(p => p.Substring(0)).ToArray();
+
+
+
+        availableNodes = new string[fileEntries.Length + 2];
+
+        availableNodes[0] = "Sequence";
+        availableNodes[1] = "Selector";
+
+        int i = 2;
+        foreach (string fileName in fileEntries)
+        {
+            availableNodes[i] = fileName;
+            i++;
+        }
+
+        GD.Print(fileDialog.CurrentDir.ToString());
+
+    }
+
+    private void OpenTaskDir()
+    {
+        fileDialog.PopupCentered();
+    }
+
+   
 
 
 }

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace SimpleBehaviorTreeEditor.AIEditor
 {
@@ -19,7 +20,7 @@ namespace SimpleBehaviorTreeEditor.AIEditor
             Godot.File saveGame = new Godot.File();
             StringBuilder stringBuilder = new StringBuilder();
 
-            saveGame.Open("MyAI/" + name + ".ai", Godot.File.ModeFlags.Write);
+            saveGame.OpenEncryptedWithPass("MyAI/" + name + ".ai", Godot.File.ModeFlags.Write, "Ligmasin");
 
             stringBuilder.Append("[Children]\n");
             SaveChildren(stringBuilder, node);
@@ -48,6 +49,7 @@ namespace SimpleBehaviorTreeEditor.AIEditor
 
         private static void SaveChildren(StringBuilder stringBuilder, BehaviorNode node)
         {
+
             BehaviorNode currentNode = node;
 
             
@@ -72,7 +74,16 @@ namespace SimpleBehaviorTreeEditor.AIEditor
        
         public static void ReadAIFile(string filename)
         {
-            StreamReader reader = new StreamReader(filename);
+            Godot.File saveGame = new Godot.File();
+            saveGame.OpenEncryptedWithPass(filename, Godot.File.ModeFlags.Read, "Ligmasin");
+            if (!saveGame.FileExists(filename))
+            {
+                GD.Print("File does not exist");
+                return;
+            }
+            
+
+            StringReader reader = new StringReader(saveGame.GetAsText());
             string line;
 
 
@@ -96,24 +107,7 @@ namespace SimpleBehaviorTreeEditor.AIEditor
                 }
             }
 
-            //GD.Print("Children:");
-            foreach (string childName in parents.Keys)
-            {
-                if (parents[childName] == null)
-                {
-                    GD.Print(childName);
-                }
-            }
-
-            //GD.Print("\nChildren with parents:");
-            foreach (string childName in parents.Keys)
-            {
-                if (parents[childName] != null)
-                {
-                    //GD.Print(childName + " has parent: " + parents[childName]);
-                }
-            }
-
+            saveGame.Close();
             reader.Close();
         }
     }

@@ -70,6 +70,30 @@ align = 1
 valign = 1
 autowrap = true
 
+[node name="Open Directory" type="TextureButton" parent="."]
+margin_left = 997.0
+margin_top = 111.0
+margin_right = 1125.0
+margin_bottom = 175.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Open Directory"]
+anchor_left = 0.14
+anchor_top = 0.156
+anchor_right = 0.87
+anchor_bottom = 0.789
+margin_left = -12.92
+margin_top = 0.0319996
+margin_right = 15.64
+margin_bottom = 0.00799561
+custom_fonts/font = SubResource( 2 )
+text = "Open Task Directory"
+align = 1
+valign = 1
+autowrap = true
+
 [node name="Save" type="TextureButton" parent="."]
 margin_left = 10.0
 margin_top = 111.0
@@ -155,6 +179,7 @@ visible = false
 position = Vector2( 373, 99 )
 
 [connection signal="button_up" from="AddRoot" to="." method="AddRootPressed"]
+[connection signal="button_up" from="Open Directory" to="." method="OpenTaskDir"]
 [connection signal="button_up" from="Save" to="." method="Save"]
 [connection signal="button_up" from="Summon" to="." method="Spawn"]
 [connection signal="button_up" from="Load" to="." method="Load"]

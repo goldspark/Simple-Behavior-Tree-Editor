@@ -1,4 +1,0 @@
-[Children]
-Selector5
-Sequence4[Parent=Selector5]
-Selector6[Parent=Selector5]

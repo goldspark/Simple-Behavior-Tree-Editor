@@ -1,9 +1,0 @@
-[Children]
-Selector1
-Run2[Parent=Selector1]
-Selector4[Parent=Run2]
-Shoot5[Parent=Run2]
-OpenDoor6[Parent=Run2]
-Hide7[Parent=OpenDoor6]
-Run8[Parent=OpenDoor6]
-Hide3[Parent=Selector1]

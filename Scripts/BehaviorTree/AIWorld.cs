@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
@@ -28,10 +25,6 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
         /// It will override function argument if it is greater than 0.
         /// </summary>
         public static double FPS = 0;
-
-
-
-
 
         /// <summary>
         /// General AI Update loop for multi threading.

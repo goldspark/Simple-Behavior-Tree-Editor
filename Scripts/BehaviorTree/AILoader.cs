@@ -1,5 +1,4 @@
-﻿using Godot;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -95,15 +94,12 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 
             string myAIDirectoryPath = filePath;
 
-            Godot.File saveGame = new Godot.File();
-            saveGame.OpenEncryptedWithPass(filePath, Godot.File.ModeFlags.Read, "Ligmasin");
-            if (!saveGame.FileExists(filePath))
+            if (!File.Exists(filePath))
             {
                 return null;
             }
-
-            string text = saveGame.GetAsText();
-            saveGame.Close();
+            
+            string text = File.ReadAllText(filePath);
 
             //Parse AI file
             ReadAIFile(myAIDirectoryPath);
@@ -160,16 +156,13 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 
         private static void ReadAIFile(string filename)
         {
-            Godot.File saveGame = new Godot.File();
-            saveGame.OpenEncryptedWithPass(filename, Godot.File.ModeFlags.Read, "Ligmasin");
-            if (!saveGame.FileExists(filename))
+            if (!File.Exists(filename))
             {
-                GD.Print("File does not exist");
                 return;
             }
 
 
-            StringReader reader = new StringReader(saveGame.GetAsText());
+            StringReader reader = new StringReader(File.ReadAllText(filename));
             string line;
 
 
@@ -192,8 +185,6 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
                     parentsD[line] = null;
                 }
             }
-
-            saveGame.Close();
             reader.Close();
         }
 

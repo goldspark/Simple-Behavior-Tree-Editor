@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Simple Behavior Tree Editor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("ExportRelease")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07657c0925fd058c908f35df717bde214f6491c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea0d1c851276eef81a09e46c787f95f28989f495")]
 [assembly: System.Reflection.AssemblyProductAttribute("Simple Behavior Tree Editor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Simple Behavior Tree Editor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

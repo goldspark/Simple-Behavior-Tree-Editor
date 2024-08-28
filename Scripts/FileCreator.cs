@@ -1,5 +1,4 @@
-﻿using Godot;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,16 +16,13 @@ namespace SimpleBehaviorTreeEditor.AIEditor
 
         public static void SaveAI(BehaviorNode node, string name)
         {
-            Godot.File saveGame = new Godot.File();
             StringBuilder stringBuilder = new StringBuilder();
-
-            saveGame.OpenEncryptedWithPass("MyAI/" + name + ".ai", Godot.File.ModeFlags.Write, "Ligmasin");
+            
 
             stringBuilder.Append("[Children]\n");
             SaveChildren(stringBuilder, node);
 
-            saveGame.StoreString(stringBuilder.ToString());
-            saveGame.Close();
+            File.WriteAllText("MyAI/" + name + ".ai", stringBuilder.ToString());
         }
 
         public static List<string> GetChildrenOfParent(string text, string parentName)
@@ -74,16 +70,13 @@ namespace SimpleBehaviorTreeEditor.AIEditor
        
         public static void ReadAIFile(string filename)
         {
-            Godot.File saveGame = new Godot.File();
-            saveGame.OpenEncryptedWithPass(filename, Godot.File.ModeFlags.Read, "Ligmasin");
-            if (!saveGame.FileExists(filename))
+            if (!File.Exists(filename))
             {
-                GD.Print("File does not exist");
                 return;
             }
             
 
-            StringReader reader = new StringReader(saveGame.GetAsText());
+            StringReader reader = new StringReader(File.ReadAllText(filename));
             string line;
 
 
@@ -107,7 +100,6 @@ namespace SimpleBehaviorTreeEditor.AIEditor
                 }
             }
 
-            saveGame.Close();
             reader.Close();
         }
     }

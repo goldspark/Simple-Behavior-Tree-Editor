@@ -1,16 +1,10 @@
 using Godot;
 using SimpleBehaviorTreeEditor.AIEditor;
-using SimpleBehaviorTreeEditor.BehaviorTree;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text.RegularExpressions;
-using static System.Net.Mime.MediaTypeNames;
 
 public class AIEditor : Control
 {
@@ -39,9 +33,14 @@ public class AIEditor : Control
     public RichTextLabel explanationText;
     public FileDialog fileDialog;
 
+    private ConfigFile m_config;
+
 
     public override void _Ready()
     {
+
+        m_config = new ConfigFile();
+
         Instance = this;
         dialogPackedScene = ResourceLoader.Load<PackedScene>("res://Scripts/DialogWithSelection.tscn");
 
@@ -51,8 +50,11 @@ public class AIEditor : Control
         editText = GetNode<Node2D>("EditText");
         fileDialog = GetParent().GetNode<FileDialog>("FileDialog");
 
+       
+
         //Create save folder for this system
-        if (!System.IO.Directory.Exists(System.IO.Path.GetDirectoryName("MyAI"))){
+        if (!System.IO.Directory.Exists(System.IO.Path.GetDirectoryName("MyAI")))
+        {
             System.IO.Directory.CreateDirectory("MyAI");
         }
         ////////////////////////////////////
@@ -64,6 +66,8 @@ public class AIEditor : Control
         availableNodes[0] = "Sequence";
         availableNodes[1] = "Selector";
 
+        if (LoadTaskDir())
+            FileDialog_DirSelected(fileDialog.CurrentDir);
 
     }
 
@@ -149,7 +153,7 @@ public class AIEditor : Control
     {
         FileCreator.ReadAIFile("MyAI/" + Selection.PressedInstance.buttonName.Text);
         Godot.File saveGame = new Godot.File();
-        saveGame.OpenEncryptedWithPass("MyAI/" + Selection.PressedInstance.buttonName.Text, Godot.File.ModeFlags.Read, "Ligmasin");
+        saveGame.Open("MyAI/" + Selection.PressedInstance.buttonName.Text, Godot.File.ModeFlags.Read);
         string text = saveGame.GetAsText();
         saveGame.Close();
 
@@ -250,8 +254,9 @@ public class AIEditor : Control
 
     private void FileDialog_DirSelected(string dir)
     {
-        
-
+      
+        m_config.SetValue("FileDir", "path", dir);
+        m_config.Save("user://filepath.cfg");
 
         // Process the list of files found in the directory. 
         string[] fileEntries = System.IO.Directory.GetFiles(dir, "*.cs", SearchOption.AllDirectories).Select(System.IO.Path.GetFileNameWithoutExtension).Select(p => p.Substring(0)).ToArray();
@@ -270,16 +275,35 @@ public class AIEditor : Control
             i++;
         }
 
-        GD.Print(fileDialog.CurrentDir.ToString());
-
     }
 
     private void OpenTaskDir()
     {
         fileDialog.PopupCentered();
+
+        LoadTaskDir();
     }
 
-   
+   private bool LoadTaskDir()
+   {
+        m_config.Load("user://filepath.cfg");
+        string dir = "";
+       
+        foreach (String data in m_config.GetSections())
+        {
+            // Fetch the data for each section.
+            dir = (String)m_config.GetValue(data, "path");
+        }
+
+        if (dir.Empty())
+        {
+            return false;
+        }
+
+        fileDialog.CurrentDir = dir;
+
+        return true;
+   }
 
 
 }

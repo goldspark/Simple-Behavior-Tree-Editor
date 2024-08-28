@@ -9,7 +9,7 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
     public class GoldSequence : GoldNode
     {
 
-        public GoldSequence() { }
+        public GoldSequence() : base(null) { }
 
         public override ReturnType Update()
         {

@@ -219,7 +219,7 @@ public class AIEditor : Control
 
     public void AddRootPressed()
     {
-        DialogWithSelection.CreateDialog(this, "SELECT ROOT NODE", "SELECTOR will return on first success, SEQUENCE will return on first failure. Recommended as a root: SELECTOR", 
+        DialogWithSelection.CreateDialog(this, "SELECT ROOT NODE", "SELECTOR will return on first success, SEQUENCE will return on first failure. Recommended as a m_root: SELECTOR", 
             "Selector", "Sequence", "Cancel", CreateSelector, CreateSequence, Cancel);
     }
 

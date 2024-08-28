@@ -1,14 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using SimpleBehaviorTreeEditor.Scripts.BehaviorTree;
+using System.Collections.Generic;
 
 
 namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
-
-    public enum RootType
-    {
-        SELECTOR,
-        SEQUENCE
-    }
 
     /// <summary>
     /// NPCs should derive from this class as it's a base
@@ -23,30 +18,22 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
     /// </summary>
     public abstract class GoldTreeBase
     {
-
-        public GoldNode root;
+        public GoldNode m_root;
+        private Blackboard m_blackboard;
 
         public GoldTreeBase()
         {
-            Initialize(RootType.SELECTOR);
+            Initialize();
         }
 
-        public GoldTreeBase(RootType rootType)
+        private void Initialize()
         {
-            Initialize(rootType);
-        }
-
-
-
-        private void Initialize(RootType rootType)
-        {
-
+            m_blackboard = new Blackboard();
             Start();
-
-            if (root != null)
+            // Can remove this if you are not using stock AIWorld
+            if (m_root != null)
             {
-                root.tree = this;
-                AIWorld.npcs.Add(this);
+                AIWorld.npcs.Add(this); 
             }
         }
 
@@ -60,14 +47,16 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
         {
             foreach (GoldNode node in nodes)
             {
-                root.children.Add(node);
+                m_root.children.Add(node);
             }
         }
 
         public void Update()
         {
-            root.Update();
+            m_root.Update();
         }
+
+        public Blackboard GetBB() { return m_blackboard; }
 
 
     }

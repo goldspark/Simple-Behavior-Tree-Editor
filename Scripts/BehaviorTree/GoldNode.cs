@@ -38,7 +38,7 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
         public string uniqueIDName;
        
         public GoldNode parent = null;
-        public GoldNode() { }
+        public GoldNode(GoldTreeBase tree) { this.tree = tree; }
  
 
         public void AddChildren(List<GoldNode> nodes)

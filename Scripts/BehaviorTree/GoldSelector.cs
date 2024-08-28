@@ -8,8 +8,7 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
     public class GoldSelector : GoldNode
     {
-
-        public GoldSelector() { }
+        public GoldSelector() : base(null) { }
 
         public override ReturnType Update()
         {

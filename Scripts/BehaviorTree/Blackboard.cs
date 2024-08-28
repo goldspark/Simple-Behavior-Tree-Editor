@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
 
 namespace SimpleBehaviorTreeEditor.Scripts.BehaviorTree
 {
@@ -13,24 +10,43 @@ namespace SimpleBehaviorTreeEditor.Scripts.BehaviorTree
 
     }
 
+
+    //Modify this to include all sorts of keys you might want for your game
+    public enum Keys
+    {
+        Position,
+        IsHappy
+    }
+
     /*
-     * Use this to emulate Blackboards like in Unreal Engine
+     * Use this to store and retreive data for your AI
      * Modify it for your own use
      */
     public class Blackboard
     {
-        //Modify this to include all sorts of keys you might want for your game
-        public enum Keys
+        
+
+        private Dictionary<Keys, Vec> m_Vectors = new Dictionary<Keys, Vec>();
+        private Dictionary<Keys, bool> m_Booleans = new Dictionary<Keys, bool>();
+
+
+        public void SetVector(Keys key, Vec value)
         {
-            Position,
-            Rotation,
-            Waypoints
+            m_Vectors[key] = value;
         }
 
-        public Dictionary<Keys, Vec> Positions = new Dictionary<Keys, Vec>();
-        public Dictionary<Keys, float> Rotations = new Dictionary<Keys, float>();
-        public Dictionary<Keys, List<Vec>> Waypoints = new Dictionary<Keys, List<Vec>>();
+        public void SetBoolean(Keys key, bool value)
+        {
+            m_Booleans[key] = value;
+        }
 
-
+        public Vec GetVector(Keys key)
+        {
+            return m_Vectors[key];
+        }
+        public bool GetBoolean(Keys key)
+        {
+            return m_Booleans[key];
+        }
     }
 }

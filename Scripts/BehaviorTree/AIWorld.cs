@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
     /// <summary>
-    /// Main AI loop. Must be put in a game worldd in order for Behavior Trees of NPCs to work!
-    /// Create your own class and derive from this one
+    /// OPTIONAL:
+    /// Main AI loop. Can be put in a game worldd in order for Behavior Trees of NPCs to work.
+    /// Create your own class and derive from this one. 
     /// </summary>
     public abstract class AIWorld
     {

@@ -35,7 +35,7 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
         /// <param name="uniqueIdentifierName"> Used by AILoader to know where to attach this node to</param>
         /// <param name="name"> Name without the ID in the name</param>
         /// <returns></returns>
-        private static GoldNode CreateNodeByName(string uniqueIdentifierName, string name)
+        private static GoldNode CreateNodeByName(GoldTreeBase tree, string uniqueIdentifierName, string name)
         {
             GoldNode node;
             switch (name)
@@ -55,7 +55,7 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
             return node;
         }
 
-        private static void AttachChildren(string text)
+        private static void AttachChildren(GoldTreeBase tree, string text)
         {
             for (int i = 0; i < parents.Count; i++)
             {
@@ -80,14 +80,14 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
                     if (!foundParentChild)
                     {
                         string outputString = Regex.Replace(childName, @"\d+", "");
-                        parents[i].Attach(CreateNodeByName(childName, outputString));
+                        parents[i].Attach(CreateNodeByName(tree, childName, outputString));
                     }
 
                 }
             }
         }
 
-        public static GoldNode LoadBHTFile(string filePath)
+        public static GoldNode LoadBHTFile(GoldTreeBase tree, string filePath)
         {
             GoldNode root = null;
 
@@ -147,13 +147,13 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
                     }
                     if (!exists)
                     {
-                        parents.Add(CreateNodeByName(parentsD[nodeName], outputString2));
+                        parents.Add(CreateNodeByName(tree, parentsD[nodeName], outputString2));
                     }
 
                 }
             }
 
-            AttachChildren(text);
+            AttachChildren(tree, text);
 
             return root;
         }

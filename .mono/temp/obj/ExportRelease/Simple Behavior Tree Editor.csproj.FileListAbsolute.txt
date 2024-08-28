@@ -7,3 +7,13 @@ F:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple 
 F:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.csproj.CoreCompileInputs.cache
 F:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.dll
 F:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.pdb
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\bin\ExportRelease\Simple Behavior Tree Editor.dll
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\bin\ExportRelease\Simple Behavior Tree Editor.pdb
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.csproj.AssemblyReference.cache
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.GeneratedMSBuildEditorConfig.editorconfig
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.AssemblyInfoInputs.cache
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.AssemblyInfo.cs
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.csproj.CoreCompileInputs.cache
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.sourcelink.json
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.dll
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\ExportRelease\Simple Behavior Tree Editor.pdb

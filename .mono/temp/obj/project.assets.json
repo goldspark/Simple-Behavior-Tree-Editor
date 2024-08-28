@@ -8,19 +8,19 @@
     ".NETFramework,Version=v4.7.2": []
   },
   "packageFolders": {
-    "C:\\Users\\infer\\.nuget\\packages\\": {}
+    "C:\\Users\\Korisnik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ToolProjects\\Simple Behavior Tree Editor\\Simple Behavior Tree Editor.csproj",
+      "projectUniqueName": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Simple Behavior Tree Editor.csproj",
       "projectName": "Simple Behavior Tree Editor",
-      "projectPath": "F:\\ToolProjects\\Simple Behavior Tree Editor\\Simple Behavior Tree Editor.csproj",
-      "packagesPath": "C:\\Users\\infer\\.nuget\\packages\\",
-      "outputPath": "F:\\ToolProjects\\Simple Behavior Tree Editor\\.mono\\temp\\obj\\",
+      "projectPath": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Simple Behavior Tree Editor.csproj",
+      "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+      "outputPath": "H:\\ToolProjects\\Simple Behavior Tree Editor\\.mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\infer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,12 +40,17 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }

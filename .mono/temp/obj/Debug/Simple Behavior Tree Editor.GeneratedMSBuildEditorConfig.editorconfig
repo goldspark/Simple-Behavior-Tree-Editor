@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = SimpleBehaviorTreeEditor
-build_property.ProjectDir = F:\TOOLPROJECTS\SIMPLE BEHAVIOR TREE EDITOR\
+build_property.ProjectDir = H:\ToolProjects\Simple Behavior Tree Editor\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

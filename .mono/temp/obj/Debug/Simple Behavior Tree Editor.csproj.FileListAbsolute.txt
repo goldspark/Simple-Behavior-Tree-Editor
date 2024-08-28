@@ -7,3 +7,13 @@ F:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\bin\Debug\Simple Behavior
 F:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\bin\Debug\Simple Behavior Tree Editor.pdb
 F:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.dll
 F:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.pdb
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\bin\Debug\Simple Behavior Tree Editor.dll
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\bin\Debug\Simple Behavior Tree Editor.pdb
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.csproj.AssemblyReference.cache
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.GeneratedMSBuildEditorConfig.editorconfig
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.AssemblyInfoInputs.cache
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.AssemblyInfo.cs
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.csproj.CoreCompileInputs.cache
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.sourcelink.json
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.dll
+H:\ToolProjects\Simple Behavior Tree Editor\.mono\temp\obj\Debug\Simple Behavior Tree Editor.pdb

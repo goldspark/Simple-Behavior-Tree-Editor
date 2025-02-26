@@ -103,6 +103,7 @@ public class DialogWithList : Control
 
     public void Exit()
     {
+        AIWorld.lockMovement = false;
         QueueFree();
     }
 }

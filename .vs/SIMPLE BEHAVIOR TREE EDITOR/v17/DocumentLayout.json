@@ -3,64 +3,80 @@
   "WorkspaceRootPath": "H:\\ToolProjects\\Simple Behavior Tree Editor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\aieditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\aieditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\filecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\filecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\aieditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\aieditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\ailoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\ailoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\aiworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\aiworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\filecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\filecreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\aiworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\aiworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\goldtreebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\goldtreebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\blackboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\blackboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviornode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\dialogwithlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\dialogwithlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\goldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\goldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\goldnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\goldnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\goldtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\goldtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\goldsequence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\goldsequence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\dialogwithselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\dialogwithselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\goldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\goldselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\goldparallel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\goldparallel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\goldnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\goldnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\blackboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\blackboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\aientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\aientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\aientitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\aientitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\nodes\\wait.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\nodes\\wait.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\behaviortree\\nodes\\invert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\behaviortree\\nodes\\invert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\selection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\selection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\save.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\save.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\movablecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\movablecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\selection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\selection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|h:\\toolprojects\\simple behavior tree editor\\scripts\\dialogwithselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF797FD7-24AA-4A0D-802D-41DC2267E042}|Simple Behavior Tree Editor.csproj|solutionrelative:scripts\\dialogwithselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,105 +86,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BehaviorNode.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\BehaviorNode.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorNode.cs",
-              "RelativeToolTip": "Scripts\\BehaviorNode.cs",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "GoldNode.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\GoldNode.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldNode.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\GoldNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T09:01:56.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Blackboard.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\Blackboard.cs",
-              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\Blackboard.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\Blackboard.cs",
-              "RelativeToolTip": "Scripts\\BehaviorTree\\Blackboard.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.106Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AIEditor.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\AIEditor.cs",
-              "RelativeDocumentMoniker": "Scripts\\AIEditor.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\AIEditor.cs",
-              "RelativeToolTip": "Scripts\\AIEditor.cs",
-              "ViewState": "AQIAAOgAAAAAAAAAAADgvwABAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FileCreator.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\FileCreator.cs",
-              "RelativeDocumentMoniker": "Scripts\\FileCreator.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\FileCreator.cs",
-              "RelativeToolTip": "Scripts\\FileCreator.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAApwEYAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Selection.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\Selection.cs",
-              "RelativeDocumentMoniker": "Scripts\\Selection.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\Selection.cs",
-              "RelativeToolTip": "Scripts\\Selection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.114Z"
+              "WhenOpened": "2024-08-22T22:10:23.11Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Save.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\Save.cs",
-              "RelativeDocumentMoniker": "Scripts\\Save.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\Save.cs",
-              "RelativeToolTip": "Scripts\\Save.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAeAAAA",
+              "Title": "AIEntity.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AIEntity.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\AIEntity.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AIEntity.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\AIEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.115Z"
+              "WhenOpened": "2024-12-31T14:07:05.642Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "MovableCamera.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\MovableCamera.cs",
-              "RelativeDocumentMoniker": "Scripts\\MovableCamera.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\MovableCamera.cs",
-              "RelativeToolTip": "Scripts\\MovableCamera.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "AIEntityManager.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AIEntityManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\AIEntityManager.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AIEntityManager.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\AIEntityManager.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA5wAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.116Z"
+              "WhenOpened": "2024-12-30T22:31:03.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GoldTreeBase.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldTreeBase.cs",
-              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\GoldTreeBase.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldTreeBase.cs",
-              "RelativeToolTip": "Scripts\\BehaviorTree\\GoldTreeBase.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAUAAAABAAAA",
+              "DocumentIndex": 2,
+              "Title": "AILoader.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AILoader.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\AILoader.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AILoader.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\AILoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.117Z",
+              "WhenOpened": "2024-08-22T22:10:23.108Z",
               "EditorCaption": ""
             },
             {
@@ -179,81 +145,179 @@
               "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\GoldSelector.cs",
               "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldSelector.cs",
               "RelativeToolTip": "Scripts\\BehaviorTree\\GoldSelector.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T22:10:23.119Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AIWorld.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AIWorld.cs",
-              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\AIWorld.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AIWorld.cs",
-              "RelativeToolTip": "Scripts\\BehaviorTree\\AIWorld.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAlAAAA",
+              "DocumentIndex": 9,
+              "Title": "GoldParallel.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldParallel.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\GoldParallel.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldParallel.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\GoldParallel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.092Z",
+              "WhenOpened": "2025-01-06T12:32:55.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AIWorld.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\AIWorld.cs",
+              "RelativeDocumentMoniker": "Scripts\\AIWorld.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\AIWorld.cs",
+              "RelativeToolTip": "Scripts\\AIWorld.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T22:17:24.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
+              "Title": "Blackboard.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\Blackboard.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\Blackboard.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\Blackboard.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\Blackboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T22:10:23.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GoldType.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldType.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\GoldType.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldType.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\GoldType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T13:56:49.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BehaviorNode.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorNode.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorNode.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorNode.cs",
+              "RelativeToolTip": "Scripts\\BehaviorNode.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAiwPAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T22:38:53.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AIEditor.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\AIEditor.cs",
+              "RelativeDocumentMoniker": "Scripts\\AIEditor.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\AIEditor.cs",
+              "RelativeToolTip": "Scripts\\AIEditor.cs",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAAAPwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T13:30:30.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FileCreator.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\FileCreator.cs",
+              "RelativeDocumentMoniker": "Scripts\\FileCreator.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\FileCreator.cs",
+              "RelativeToolTip": "Scripts\\FileCreator.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAFMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T22:10:23.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GoldTreeBase.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldTreeBase.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\GoldTreeBase.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldTreeBase.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\GoldTreeBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T22:10:23.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "GoldSequence.cs",
               "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldSequence.cs",
               "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\GoldSequence.cs",
               "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldSequence.cs",
               "RelativeToolTip": "Scripts\\BehaviorTree\\GoldSequence.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T22:10:23.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AILoader.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AILoader.cs",
-              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\AILoader.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\AILoader.cs",
-              "RelativeToolTip": "Scripts\\BehaviorTree\\AILoader.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAApwLoAAAANAAAA",
+              "DocumentIndex": 16,
+              "Title": "Selection.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\Selection.cs",
+              "RelativeDocumentMoniker": "Scripts\\Selection.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\Selection.cs",
+              "RelativeToolTip": "Scripts\\Selection.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-22T22:10:23.114Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DialogWithList.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\DialogWithList.cs",
-              "RelativeDocumentMoniker": "Scripts\\DialogWithList.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\DialogWithList.cs",
-              "RelativeToolTip": "Scripts\\DialogWithList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 14,
+              "Title": "Wait.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\Nodes\\Wait.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\Nodes\\Wait.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\Nodes\\Wait.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\Nodes\\Wait.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.12Z"
+              "WhenOpened": "2025-01-26T11:11:54.459Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GoldNode.cs",
-              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\GoldNode.cs",
-              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\GoldNode.cs",
-              "RelativeToolTip": "Scripts\\BehaviorTree\\GoldNode.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAMwCIAAAA7AAAA",
+              "DocumentIndex": 15,
+              "Title": "Invert.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\Nodes\\Invert.cs",
+              "RelativeDocumentMoniker": "Scripts\\BehaviorTree\\Nodes\\Invert.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\BehaviorTree\\Nodes\\Invert.cs",
+              "RelativeToolTip": "Scripts\\BehaviorTree\\Nodes\\Invert.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T22:10:23.11Z"
+              "WhenOpened": "2025-01-26T11:12:08.957Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
+              "Title": "Save.cs",
+              "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\Save.cs",
+              "RelativeDocumentMoniker": "Scripts\\Save.cs",
+              "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\Save.cs",
+              "RelativeToolTip": "Scripts\\Save.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T22:10:23.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "DialogWithSelection.cs",
               "DocumentMoniker": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\DialogWithSelection.cs",
               "RelativeDocumentMoniker": "Scripts\\DialogWithSelection.cs",
               "ToolTip": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Scripts\\DialogWithSelection.cs",
               "RelativeToolTip": "Scripts\\DialogWithSelection.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBAAAAAAAAAA",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T22:10:23.107Z"
             }

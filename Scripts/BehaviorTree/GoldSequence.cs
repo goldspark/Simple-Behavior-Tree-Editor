@@ -8,30 +8,41 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
     public class GoldSequence : GoldNode
     {
+        public int currentIndex = 0;
 
-        public GoldSequence() : base(null) { }
+        public GoldSequence(GoldTreeBase tree) : base(tree) { }
 
-        public override ReturnType Update()
+        public override ReturnType Update(float delta)
         {
 
-
-            foreach (GoldNode child in children)
+            if(tree.Interrupt && parent != null)
             {
-                switch (child.Update())
-                {
-                    case ReturnType.SUCCESS:
-                        continue;
-                    case ReturnType.FAILURE:
-                        return ReturnType.FAILURE;
-                    case ReturnType.RUNNING:
-                        continue;
-                    default:
-                        return ReturnType.RUNNING;
-                }
+                currentIndex = 0;
+                tree.Interrupt = false;             
+                return ReturnType.FAILURE;
             }
 
-
+            for (int i = currentIndex; i < children.Count; i++)
+            { 
+                var result = children[i].Update(delta);
+                switch (result)
+                {
+                    case ReturnType.SUCCESS:
+                        currentIndex++;
+                        continue;
+                    case ReturnType.FAILURE:
+                        currentIndex = 0;
+                        return ReturnType.FAILURE;
+                    case ReturnType.RUNNING:
+                        return ReturnType.RUNNING;
+                    default:
+                        throw new InvalidOperationException("GoldSequence: Unrecognized ReturnType");
+                }
+            }
+            currentIndex = 0;
             return ReturnType.SUCCESS;
         }
+
+
     }
 }

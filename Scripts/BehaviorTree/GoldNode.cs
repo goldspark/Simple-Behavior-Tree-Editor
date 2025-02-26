@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GoldTypes;
+using SimpleBehaviorTreeEditor.Scripts.BehaviorTree;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -30,16 +32,16 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
     {
         public GoldTreeBase tree;
         public List<GoldNode> children = new List<GoldNode>();
-       
+        public Dictionary<string, object> variables = new Dictionary<string, object>();
         /// <summary>
         /// Unique identifier name so the AILoader can know
         /// where to attach this node to.
         /// </summary>
         public string uniqueIDName;
-       
+
         public GoldNode parent = null;
         public GoldNode(GoldTreeBase tree) { this.tree = tree; }
- 
+    
 
         public void AddChildren(List<GoldNode> nodes)
         {
@@ -58,10 +60,23 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
             children.Add(node);
         }
 
-        public abstract ReturnType Update();
-        
+        public virtual void InitVarsFromLoader()
+        {
+            //Call here functions like AILoader.LoadFloat... 
+        }
+        public abstract ReturnType Update(float delta);
 
-       
+
+
+        public Blackboard GetBB()
+        {
+            return tree.GetBB();
+        }
+
+        public T Owner<T>()
+        {
+            return (T)tree.owner.Owner;
+        }
 
     }
 }

@@ -52,5 +52,6 @@ margin_bottom = 27.0
 custom_fonts/font = SubResource( 2 )
 text = "No"
 
+[connection signal="visibility_changed" from="." to="." method="Visibility"]
 [connection signal="button_up" from="Ok" to="." method="Released"]
 [connection signal="button_down" from="No" to="." method="NoReleased"]

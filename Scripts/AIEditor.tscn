@@ -1,6 +1,5 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://HUD/glass_pane_transparent.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/FFFFORWA.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://HUD/btn_normal.png" type="Texture" id=3]
 [ext_resource path="res://HUD/btn_presse.png" type="Texture" id=4]
@@ -8,7 +7,7 @@
 [ext_resource path="res://EditText.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
+size = 24
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -21,6 +20,15 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="StreamTexture" id=6]
 
+[sub_resource type="StreamTexture" id=8]
+load_path = "res://.import/btn_normal.png-5a2ab32beb8aaf8cf569067a63b8bf6a.stex"
+
+[sub_resource type="StreamTexture" id=9]
+load_path = "res://.import/btn_presse.png-ad59e23838296675f3b3c6b8e75c1bc0.stex"
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 2 )
+
 [sub_resource type="StreamTexture" id=3]
 
 [sub_resource type="StreamTexture" id=4]
@@ -30,27 +38,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
 
-[node name="BG" type="Sprite" parent="."]
-scale = Vector2( 4, 4 )
-texture = ExtResource( 1 )
-centered = false
-
 [node name="Dialogs" type="Node2D" parent="."]
 z_index = 1
 
 [node name="Title" type="Label" parent="."]
-margin_left = 21.0
-margin_top = 19.0
-margin_right = 337.0
-margin_bottom = 63.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -620.0
+margin_top = 3.0
+margin_right = -268.0
+margin_bottom = 47.0
 custom_fonts/font = SubResource( 1 )
 text = "Behavior Creator"
+valign = 1
+
+[node name="SelectedNode" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -176.0
+margin_right = 176.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
 
 [node name="AddRoot" type="TextureButton" parent="."]
-margin_left = 143.0
-margin_top = 111.0
-margin_right = 271.0
-margin_bottom = 175.0
+margin_left = 20.0
+margin_top = 67.0
+margin_right = 148.0
+margin_bottom = 131.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 expand = true
@@ -65,16 +81,16 @@ margin_top = 0.0319996
 margin_right = 15.64
 margin_bottom = 0.00799561
 custom_fonts/font = SubResource( 2 )
-text = "CREATE "
+text = "New"
 align = 1
 valign = 1
 autowrap = true
 
 [node name="Open Directory" type="TextureButton" parent="."]
-margin_left = 997.0
-margin_top = 111.0
-margin_right = 1125.0
-margin_bottom = 175.0
+margin_left = 20.0
+margin_top = 191.0
+margin_right = 148.0
+margin_bottom = 255.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 expand = true
@@ -89,16 +105,16 @@ margin_top = 0.0319996
 margin_right = 15.64
 margin_bottom = 0.00799561
 custom_fonts/font = SubResource( 2 )
-text = "Open Task Directory"
+text = "Tasks"
 align = 1
 valign = 1
 autowrap = true
 
 [node name="Save" type="TextureButton" parent="."]
-margin_left = 10.0
-margin_top = 111.0
-margin_right = 138.0
-margin_bottom = 175.0
+margin_left = 20.0
+margin_top = 131.0
+margin_right = 148.0
+margin_bottom = 195.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 expand = true
@@ -113,7 +129,7 @@ margin_top = 0.0319996
 margin_right = 15.64
 margin_bottom = 0.00799561
 custom_fonts/font = SubResource( 7 )
-text = "SAVE"
+text = "Save"
 align = 1
 valign = 1
 autowrap = true
@@ -144,10 +160,10 @@ valign = 1
 autowrap = true
 
 [node name="Load" type="TextureButton" parent="."]
-margin_left = 1138.0
-margin_top = 111.0
-margin_right = 1266.0
-margin_bottom = 175.0
+margin_left = 20.0
+margin_top = 255.0
+margin_right = 148.0
+margin_bottom = 319.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 expand = true
@@ -162,7 +178,31 @@ margin_top = 0.0319996
 margin_right = 15.64
 margin_bottom = 0.00799561
 custom_fonts/font = SubResource( 7 )
-text = "LOAD"
+text = "Load"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="CodeCopy" type="TextureButton" parent="."]
+margin_left = 1138.0
+margin_top = 67.0
+margin_right = 1266.0
+margin_bottom = 131.0
+texture_normal = SubResource( 8 )
+texture_pressed = SubResource( 9 )
+expand = true
+
+[node name="Label" type="Label" parent="CodeCopy"]
+anchor_left = 0.14
+anchor_top = 0.156
+anchor_right = 0.87
+anchor_bottom = 0.789
+margin_left = -12.92
+margin_top = 0.0319996
+margin_right = 15.64
+margin_bottom = 0.00799561
+custom_fonts/font = SubResource( 10 )
+text = "Copy code"
 align = 1
 valign = 1
 autowrap = true
@@ -183,4 +223,5 @@ position = Vector2( 373, 99 )
 [connection signal="button_up" from="Save" to="." method="Save"]
 [connection signal="button_up" from="Summon" to="." method="Spawn"]
 [connection signal="button_up" from="Load" to="." method="Load"]
+[connection signal="button_up" from="CodeCopy" to="." method="CopyCode"]
 [connection signal="released" from="Exit" to="." method="ExitPressed"]

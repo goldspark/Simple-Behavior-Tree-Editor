@@ -1,22 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using BehaviorTree;
+using GoldTypes;
+using System;
+using System.Collections.Generic;
 
 
 namespace SimpleBehaviorTreeEditor.Scripts.BehaviorTree
 {
-    /**
-     * Dummy Vector class just for data example. You can safely remove this
-     */
-    public class Vec{
-
-    }
-
-
-    //Modify this to include all sorts of keys you might want for your game
-    public enum Keys
-    {
-        Position,
-        IsHappy
-    }
 
     /*
      * Use this to store and retreive data for your AI
@@ -24,29 +13,95 @@ namespace SimpleBehaviorTreeEditor.Scripts.BehaviorTree
      */
     public class Blackboard
     {
-        
 
-        private Dictionary<Keys, Vec> m_Vectors = new Dictionary<Keys, Vec>();
-        private Dictionary<Keys, bool> m_Booleans = new Dictionary<Keys, bool>();
+        public GoldEnum Keys = new GoldEnum(new List<string> { });
+
+        public Dictionary<string, string> Conditions = new Dictionary<string, string>(); //Necessary, used for nodes which are scripted to check if condition is set before starting
+
+        private Dictionary<int, AIEntity> Entities = new Dictionary<int, AIEntity>();
+        private Dictionary<int, int> Integers = new Dictionary<int, int>();
+        private Dictionary<int, bool> Booleans = new Dictionary<int, bool>();
+        private Dictionary<int, float> Floats = new Dictionary<int, float>();
+        private Dictionary<int, string> Strings = new Dictionary<int, string>();
 
 
-        public void SetVector(Keys key, Vec value)
+        public void SetEntity(string key, AIEntity entity)
         {
-            m_Vectors[key] = value;
+            if (Entities.ContainsKey(Keys[key]))
+            {
+                Entities[Keys[key]] = entity;
+                return;
+            }
+            Entities.Add(Keys[key], entity); 
         }
 
-        public void SetBoolean(Keys key, bool value)
+        public void SetInt(string key, int value)
         {
-            m_Booleans[key] = value;
+            if (Integers.ContainsKey(Keys[key]))
+            {
+                Integers[Keys[key]] = value;
+                return;
+            }
+            Integers.Add(Keys[key], value);
         }
 
-        public Vec GetVector(Keys key)
+        public void SetBool(string key, bool value)
         {
-            return m_Vectors[key];
+            if (Booleans.ContainsKey(Keys[key]))
+            {
+                Booleans[Keys[key]] = value;
+                return;
+            }
+            Booleans.Add(Keys[key], value);
         }
-        public bool GetBoolean(Keys key)
+
+        public void SetString(string key, string value)
         {
-            return m_Booleans[key];
+            if (Strings.ContainsKey(Keys[key]))
+            {
+                Strings[Keys[key]] = value;
+                return;
+            }
+            Strings.Add(Keys[key], value);
         }
+
+        public void SetFloat(string key, float value)
+        {
+            if (Floats.ContainsKey(Keys[key]))
+            {
+                Floats[Keys[key]] = value;
+                return;
+            }
+            Floats.Add(Keys[key], value);
+        }
+
+
+        public AIEntity GetEntity(string key)
+        {
+            if (!Entities.TryGetValue(Keys[key], out var entity))
+                entity = null;
+            return entity; 
+        }
+
+        public int GetIntegers(string key)
+        {
+            return Integers[Keys[key]];
+        }
+
+        public bool GetBoolean(string key)
+        {
+            return Booleans[Keys[key]];
+        }
+
+        public float GetFloat(string key)
+        {
+            return Floats[Keys[key]];
+        }
+
+        public string GetString(string key)
+        {
+            return Strings[Keys[key]];
+        }
+
     }
 }

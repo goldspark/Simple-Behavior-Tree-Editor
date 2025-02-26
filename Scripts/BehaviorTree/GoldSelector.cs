@@ -8,19 +8,28 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
     public class GoldSelector : GoldNode
     {
-        public GoldSelector() : base(null) { }
+        public int currentIndex = 0;
+        public GoldSelector(GoldTreeBase tree) : base(tree) { }
 
-        public override ReturnType Update()
+        public override ReturnType Update(float delta)
         {
-          
-
-            foreach (GoldNode child in children)
+            if (tree.Interrupt && parent != null)
             {
-                switch(child.Update())
+                currentIndex = 0;
+                tree.Interrupt = false;
+                return ReturnType.FAILURE;
+            }
+
+            for (int i = currentIndex; i < children.Count; i++)
+            {
+                var result = children[i].Update(delta);
+                switch (result)
                 {
                     case ReturnType.SUCCESS:
+                        currentIndex = 0;
                         return ReturnType.SUCCESS;
                     case ReturnType.FAILURE:
+                        currentIndex++;
                         continue;
                     case ReturnType.RUNNING:
                         return ReturnType.RUNNING;
@@ -28,9 +37,9 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
                         return ReturnType.RUNNING;
                 }
             }
-
-
+            currentIndex = 0;
             return ReturnType.FAILURE;
         }
+
     }
 }

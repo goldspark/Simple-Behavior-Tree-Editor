@@ -1,28 +1,40 @@
-﻿using System;
+﻿using Godot;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using File = System.IO.File;
 
 namespace SimpleBehaviorTreeEditor.AIEditor
 {
     public static class FileCreator
     {
-
+        private static List<string> code = new List<string>();
         public static Dictionary<string, string> parents = new Dictionary<string, string>();
-
+        public static string AICode = null;
 
         public static void SaveAI(BehaviorNode node, string name)
         {
             StringBuilder stringBuilder = new StringBuilder();
             
-
-            stringBuilder.Append("[Children]\n");
-            SaveChildren(stringBuilder, node);
+            stringBuilder.Append("[Tree]\n");
+            SaveNodes(stringBuilder, node);
+            foreach(var s in code)
+                stringBuilder.Append(s + "\n");
 
             File.WriteAllText("MyAI/" + name + ".ai", stringBuilder.ToString());
+      
+
+            byte[] bytes = Encoding.UTF8.GetBytes(stringBuilder.ToString());
+            string base64String = Convert.ToBase64String(bytes);
+            //Convert.FromBase64String(base64String);
+            //Encoding.UTF8.GetString(bytes);
+            File.WriteAllText("MyAI/" + name + ".aie", base64String);
+            AICode = base64String;
         }
 
         public static List<string> GetChildrenOfParent(string text, string parentName)
@@ -32,9 +44,9 @@ namespace SimpleBehaviorTreeEditor.AIEditor
 
             foreach(string line in lines)
             {
-                if (line.Contains($"[Parent={parentName}]"))
+                if (line.Contains($"(Parent={parentName})"))
                 {
-                    int start = line.IndexOf("[Parent=") + 8;
+                    int start = line.IndexOf("(Parent=") + 8;
                     string childName = line.Substring(0, start - 8);
                     result.Add(childName);
                 }
@@ -43,26 +55,27 @@ namespace SimpleBehaviorTreeEditor.AIEditor
             return result;
         }
 
-        private static void SaveChildren(StringBuilder stringBuilder, BehaviorNode node)
+        private static void SaveNodes(StringBuilder stringBuilder, BehaviorNode node)
         {
 
             BehaviorNode currentNode = node;
 
-            
-            stringBuilder.Append(currentNode.title.Text + "" + currentNode.id);
-            
-
-            if(currentNode.parent != null)
+            stringBuilder.Append(currentNode.uniqueName);
+            if (currentNode.code.Count > 0)
             {
-                stringBuilder.Append("[Parent=" + currentNode.parent.title.Text + "" +currentNode.parent.id +"]\n");
+                code.Add($"[{currentNode.uniqueName}]");
+                code.AddRange(currentNode.code);
             }
 
-            if(currentNode.parent == null)
+            if(currentNode.parent != null)
+                stringBuilder.Append("(Parent=" + currentNode.parent.uniqueName + ")\n");
+
+            if (currentNode.parent == null)
                 stringBuilder.AppendLine();
 
             for(int i = 0; i < currentNode.children.Count; i++)
             {
-                SaveChildren(stringBuilder, currentNode.children[i]);
+                SaveNodes(stringBuilder, currentNode.children[i]);
             }
             
         }
@@ -82,16 +95,16 @@ namespace SimpleBehaviorTreeEditor.AIEditor
 
             while ((line = reader.ReadLine()) != null)
             {
-                if (line.StartsWith("[Children]"))
+                if (line.StartsWith("[Tree]"))
                 {
                     continue;
                 }
-                else if (line.Contains("[Parent="))
+                else if (line.Contains("(Parent="))
                 {
-                    int startIndex = line.IndexOf("[Parent=") + 8;
-                    int endIndex = line.IndexOf("]", startIndex);
+                    int startIndex = line.IndexOf("(Parent=") + 8;
+                    int endIndex = line.IndexOf(")", startIndex);
                     string parentName = line.Substring(startIndex, endIndex - startIndex);
-                    string childName = line.Substring(0, line.IndexOf("[Parent="));
+                    string childName = line.Substring(0, line.IndexOf("(Parent="));
                     parents[childName] = parentName;
                 }
                 else

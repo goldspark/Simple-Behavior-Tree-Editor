@@ -3,3 +3,6 @@ build_property.RootNamespace = SimpleBehaviorTreeEditor
 build_property.ProjectDir = H:\ToolProjects\Simple Behavior Tree Editor\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

@@ -8,19 +8,24 @@
     ".NETFramework,Version=v4.7.2": []
   },
   "packageFolders": {
-    "C:\\Users\\Korisnik\\.nuget\\packages\\": {}
+    "C:\\Users\\Korisnik\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Simple Behavior Tree Editor.csproj",
+      "projectUniqueName": "H:\\TOOLPROJECTS\\SIMPLE BEHAVIOR TREE EDITOR\\Simple Behavior Tree Editor.csproj",
       "projectName": "Simple Behavior Tree Editor",
-      "projectPath": "H:\\ToolProjects\\Simple Behavior Tree Editor\\Simple Behavior Tree Editor.csproj",
+      "projectPath": "H:\\TOOLPROJECTS\\SIMPLE BEHAVIOR TREE EDITOR\\Simple Behavior Tree Editor.csproj",
       "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-      "outputPath": "H:\\ToolProjects\\Simple Behavior Tree Editor\\.mono\\temp\\obj\\",
+      "outputPath": "H:\\TOOLPROJECTS\\SIMPLE BEHAVIOR TREE EDITOR\\.mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -45,12 +50,13 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

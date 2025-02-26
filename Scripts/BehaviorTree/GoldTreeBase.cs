@@ -1,4 +1,5 @@
-﻿using SimpleBehaviorTreeEditor.Scripts.BehaviorTree;
+﻿using BehaviorTree;
+using SimpleBehaviorTreeEditor.Scripts.BehaviorTree;
 using System.Collections.Generic;
 
 
@@ -6,7 +7,7 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
 {
 
     /// <summary>
-    /// NPCs should derive from this class as it's a base
+    /// NPCs should derive from this class as it's a base behavior tree
     /// class for NPC behavior.
     /// <example>
     /// Example:
@@ -18,26 +19,28 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
     /// </summary>
     public abstract class GoldTreeBase
     {
+        public AIEntity owner;
         public GoldNode m_root;
         private Blackboard m_blackboard;
-
+        /// <summary>
+        /// Interrupts a selector or sequence node setting it to failure.
+        /// Can be used to reset a tree. But not always because
+        /// it depends on what type of composite node have you created.
+        /// It does not interrupt the parallel node
+        /// </summary>
+        public bool Interrupt = false; 
         public GoldTreeBase()
         {
-            Initialize();
+            Init();
         }
 
-        private void Initialize()
+        private void Init()
         {
             m_blackboard = new Blackboard();
-            Start();
-            // Can remove this if you are not using stock AIWorld
-            if (m_root != null)
-            {
-                AIWorld.npcs.Add(this); 
-            }
+            m_root = Start();
         }
 
-        public abstract void Start();
+        public abstract GoldNode Start();
 
         /// <summary>
         /// Add tree nodes 
@@ -51,12 +54,16 @@ namespace SimpleBehaviorTreeEditor.BehaviorTree
             }
         }
 
-        public void Update()
+        public void Update(float delta)
         {
-            m_root.Update();
+            m_root.Update(delta);
         }
 
-        public Blackboard GetBB() { return m_blackboard; }
+        public Blackboard GetBB()
+        {
+            return m_blackboard;
+        }
+
 
 
     }

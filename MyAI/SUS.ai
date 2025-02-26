@@ -1,6 +1,0 @@
-[Children]
-Selector1
-Sequence2[Parent=Selector1]
-TaskBuyWeapons3[Parent=Selector1]
-TaskDoTradeBetweenStationsLocal4[Parent=Selector1]
-TaskFollowPlayer5[Parent=Selector1]

@@ -1,0 +1,8 @@
+[Tree]
+Selector1
+Invert2(Parent=Selector1)
+[Invert2]
+lol
+
+[Selector1]
+

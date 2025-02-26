@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/AIEditor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/AIWorld.cs" type="Script" id=2]
 [ext_resource path="res://Scripts/MovableCamera.tscn" type="PackedScene" id=3]
 
 [node name="AIWorld" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="MovableCamera" parent="." instance=ExtResource( 3 )]
 
@@ -11,7 +13,7 @@
 
 [node name="AIEditor" parent="CanvasLayer" instance=ExtResource( 1 )]
 anchor_bottom = 0.319
-margin_bottom = 0.319992
+margin_bottom = -229.68
 
 [node name="FileDialog" type="FileDialog" parent="CanvasLayer"]
 margin_left = 303.0
@@ -26,4 +28,5 @@ mode = 2
 access = 2
 show_hidden_files = true
 
+[connection signal="confirmed" from="CanvasLayer/FileDialog" to="CanvasLayer/AIEditor" method="FileDialogConfirm"]
 [connection signal="dir_selected" from="CanvasLayer/FileDialog" to="CanvasLayer/AIEditor" method="FileDialog_DirSelected"]

@@ -1,0 +1,45 @@
+[Tree]
+Selector1
+Sequence2(Parent=Selector1)
+NextWaypoint4(Parent=Sequence2)
+LookAt5(Parent=Sequence2)
+MoveTo6(Parent=Sequence2)
+WaitRandom15(Parent=Sequence2)
+Sequence7(Parent=Selector1)
+Selector15(Parent=Sequence7)
+IsEnemyDetected16(Parent=Selector15)
+NextTarget17(Parent=Selector15)
+IsEnemyDetected8(Parent=Sequence7)
+NextWaypointAroundTarget9(Parent=Sequence7)
+MoveToNoBlock10(Parent=Sequence7)
+ShootAtEntity11(Parent=Sequence7)
+[WaitRandom15]
+Float minWaitTime = 0.5;
+Float maxWaitTime = 5;
+
+
+
+
+
+[IsEnemyDetected16]
+BB.Condition target = "enemyTarget"
+
+[IsEnemyDetected8]
+
+
+[WaitRandom15]
+Float minWaitTime = 0.5;
+Float maxWaitTime = 5;
+
+
+
+
+
+
+[IsEnemyDetected16]
+BB.Condition target = "enemyTarget"
+
+[IsEnemyDetected8]
+
+
+
